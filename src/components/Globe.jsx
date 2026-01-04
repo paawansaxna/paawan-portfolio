@@ -79,7 +79,7 @@ export function Globe({
     window.addEventListener("resize", onResize)
     onResize()
     let phi = 0
-    const globe = createGlobe(canvasRef.current, {
+    const Globe = createGlobe(canvasRef.current, {
       ...config,
       width: width * 2,
       height: width * 2,
@@ -93,7 +93,7 @@ export function Globe({
 
     setTimeout(() => (canvasRef.current.style.opacity = "1"), 0)
     return () => {
-      globe.destroy()
+      Globe.destroy()
       window.removeEventListener("resize", onResize)
     }
   }, [rs, config])
