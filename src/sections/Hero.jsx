@@ -7,6 +7,7 @@ import { easing } from "maath";
 import Loader from "../components/Loader";
 import { Suspense, useState } from "react";
 
+
 const Hero = () => {
   const isMobile = useMediaQuery({ maxWidth: 853 });
   const [hovered, setHovered] = useState(false);
@@ -24,10 +25,10 @@ const Hero = () => {
       {/* 3D SCENE – DESKTOP ONLY */}
       {!isMobile && (
         <figure className="absolute inset-0 w-screen h-screen z-20">
-          <Canvas camera={{ position: [0, 1, 3] }}>
+          <Canvas camera={{ position: [0.4, 1, 3.5], fov: 45 }}>
             <Suspense fallback={<Loader />}>
               <Float>
-                <group position={[0.6, 0, 0]}>
+                <group position={[-0.3, 0, 0]} scale={0.6}>
                   <Astronaut
                     onPointerOver={(e) => {
                       e.stopPropagation();
