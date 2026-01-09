@@ -11,18 +11,8 @@ This repository contains a frontend application developed with a focus on clean 
 - React  
 - Vite  
 - JavaScript (ES6+)  
-- CSS  
-- ESLint  
-
-## Project Structure
-
-src/
-├── components/   # Reusable UI components
-├── pages/        # Page-level components
-├── hooks/        # Custom hooks
-├── utils/        # Helper functions
-├── assets/       # Static assets
-└── main.jsx
+- Tailwind CSS  
+- Three JS  
 
 ## Features
 
